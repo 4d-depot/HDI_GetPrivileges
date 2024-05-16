@@ -5,7 +5,7 @@
 	"windowMinHeight": 540,
 	"windowMaxHeight": 32000,
 	"width": 960,
-	"height": 640,
+	"height": 980,
 	"menuBar": "Menu Bar #1",
 	"markerHeader": 15,
 	"markerBody": 200,
@@ -13,7 +13,7 @@
 	"markerFooter": 240,
 	"events": [
 		"onLoad",
-		"onCloseBox"
+		"onPageChange"
 	],
 	"method": "method.4dm",
 	"pageFormat": {
@@ -29,7 +29,7 @@
 					"top": 20,
 					"left": 20,
 					"width": 920,
-					"height": 560,
+					"height": 940,
 					"sizingX": "grow",
 					"sizingY": "grow",
 					"dataSource": "objTabs",
@@ -39,35 +39,17 @@
 						"onClick"
 					]
 				},
-				"BtnOK": {
-					"type": "button",
-					"top": 600,
-					"left": 838,
-					"width": 102,
+				"Check Box": {
+					"type": "checkbox",
+					"text": "Trace",
+					"top": 940,
+					"left": 20,
+					"width": 110,
 					"height": 20,
-					"sizingX": "move",
-					"sizingY": "move",
-					"tooltip": {
-						"$ref": "/SOURCES/tips.json#/OK"
-					},
-					"shortcutKey": "[Enter]",
-					"text": "OK",
-					"class": "Buttons_13",
-					"defaultButton": true,
 					"events": [
 						"onClick"
 					],
-					"method": "ObjectMethods/BtnOK.4dm"
-				},
-				"Line": {
-					"type": "line",
-					"top": 0,
-					"left": 480,
-					"height": 640,
-					"visibility": "hidden",
-					"sizingY": "grow",
-					"stroke": "#800080",
-					"strokeDashArray": "1 1"
+					"dataSource": "btnTrace"
 				}
 			}
 		},
@@ -75,10 +57,10 @@
 			"objects": {
 				"information": {
 					"type": "input",
-					"top": 80,
-					"left": 80,
-					"width": 800,
-					"height": 480,
+					"top": 100,
+					"left": 40,
+					"width": 850,
+					"height": 500,
 					"sizingX": "grow",
 					"sizingY": "grow",
 					"dataSource": "Infos[0].Description",
@@ -94,44 +76,41 @@
 						"onDataChange"
 					],
 					"class": "description"
-				}
-			}
-		},
-		{
-			"objects": {
-				"information2": {
-					"type": "input",
-					"top": 80,
-					"left": 40,
-					"width": 420,
-					"height": 480,
-					"sizingY": "grow",
-					"dataSource": "Infos[1].Description",
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"enterable": false,
-					"styledText": true,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					],
-					"class": "description"
 				},
-				"Rectangle": {
-					"type": "rectangle",
-					"top": 80,
-					"left": 480,
-					"width": 440,
-					"height": 480,
-					"visibility": "hidden",
-					"sizingX": "grow",
-					"sizingY": "grow",
-					"fill": "transparent",
-					"stroke": "#9400D3",
-					"strokeDashArray": "1 1"
+				"Input": {
+					"type": "input",
+					"left": 190,
+					"top": 630,
+					"width": 300,
+					"height": 300,
+					"dataSource": "LinesCode{2}",
+					"enterable": false,
+					"focusable": false,
+					"styledText": true
+				},
+				"Button14": {
+					"type": "button",
+					"text": "Show on the roles.json file on disk",
+					"top": 630,
+					"left": 510,
+					"width": 280,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button14.4dm",
+					"focusable": false
+				},
+				"Text3": {
+					"type": "text",
+					"text": "roles.json file",
+					"top": 600,
+					"left": 190,
+					"width": 150,
+					"height": 20,
+					"fontWeight": "bold",
+					"stroke": "#6495ed",
+					"fontSize": 18
 				}
 			}
 		},
@@ -139,11 +118,10 @@
 			"objects": {
 				"information1": {
 					"type": "input",
-					"top": 80,
-					"left": 500,
-					"width": 420,
-					"height": 480,
-					"sizingX": "move",
+					"top": 100,
+					"left": 40,
+					"width": 850,
+					"height": 240,
 					"sizingY": "grow",
 					"dataSource": "Infos[2].Description",
 					"focusable": false,
@@ -159,31 +137,143 @@
 					],
 					"class": "description"
 				},
-				"Rectangle1": {
-					"type": "rectangle",
-					"top": 80,
-					"left": 40,
-					"width": 440,
-					"height": 480,
-					"visibility": "hidden",
-					"sizingX": "grow",
-					"sizingY": "grow",
+				"Button10": {
+					"type": "button",
+					"text": "Authentify with Medium role",
+					"top": 360,
+					"left": 30,
+					"width": 200,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"focusable": false,
+					"method": "ObjectMethods/Button10.4dm",
+					"textAlign": "center"
+				},
+				"Input13": {
+					"type": "input",
+					"left": 30,
+					"top": 265,
+					"width": 570,
+					"height": 30,
+					"dataSource": "LinesCode{0}",
+					"enterable": false,
+					"focusable": false,
 					"fill": "transparent",
-					"stroke": "#9400D3",
-					"strokeDashArray": "1 1"
+					"styledText": true
+				},
+				"Input9": {
+					"type": "input",
+					"left": 68,
+					"top": 549,
+					"width": 290,
+					"height": 220,
+					"enterable": false,
+					"focusable": false,
+					"dataSource": "Form:C1466.privileges",
+					"scrollbarVertical": "visible"
+				},
+				"Button19": {
+					"type": "button",
+					"text": "Authentify with High role",
+					"top": 320,
+					"left": 30,
+					"width": 200,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"focusable": false,
+					"method": "ObjectMethods/Button19.4dm",
+					"textAlign": "center"
+				},
+				"Button20": {
+					"type": "button",
+					"text": "Get privileges",
+					"top": 400,
+					"left": 30,
+					"width": 200,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"focusable": false,
+					"method": "ObjectMethods/Button20.4dm",
+					"textAlign": "center"
+				},
+				"Input4": {
+					"type": "input",
+					"left": 258,
+					"top": 320,
+					"width": 570,
+					"height": 30,
+					"dataSource": "LinesCode{1}",
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"styledText": true
+				},
+				"Input5": {
+					"type": "input",
+					"left": 258,
+					"top": 370,
+					"width": 570,
+					"height": 30,
+					"dataSource": "LinesCode{2}",
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"styledText": true
+				},
+				"Input6": {
+					"type": "input",
+					"left": 258,
+					"top": 412,
+					"width": 570,
+					"height": 97,
+					"dataSource": "LinesCode{3}",
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"styledText": true
+				},
+				"Input10": {
+					"type": "input",
+					"left": 364,
+					"top": 580,
+					"width": 570,
+					"height": 33,
+					"dataSource": "LinesCode{4}",
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"styledText": true
 				}
 			}
 		},
 		{
 			"objects": {
-				"information3": {
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 440,
+					"left": 30,
+					"width": 890,
+					"height": 150,
+					"fill": "transparent",
+					"strokeDashArray": [
+						1,
+						3
+					]
+				},
+				"information2": {
 					"type": "input",
-					"top": 80,
+					"top": 100,
 					"left": 40,
-					"width": 420,
-					"height": 480,
+					"width": 850,
+					"height": 290,
 					"sizingY": "grow",
-					"dataSource": "Infos[3].Description",
+					"dataSource": "Infos[1].Description",
 					"focusable": false,
 					"fill": "transparent",
 					"borderStyle": "none",
@@ -197,18 +287,282 @@
 					],
 					"class": "description"
 				},
-				"Rectangle2": {
-					"type": "rectangle",
-					"top": 80,
-					"left": 480,
-					"width": 440,
-					"height": 480,
-					"visibility": "hidden",
-					"sizingX": "grow",
-					"sizingY": "grow",
-					"fill": "transparent",
-					"stroke": "#9400D3",
-					"strokeDashArray": "1 1"
+				"Input1": {
+					"type": "input",
+					"left": 40,
+					"top": 400,
+					"width": 300,
+					"height": 20,
+					"enterable": false,
+					"focusable": false,
+					"dataSource": "Form:C1466.readCustomers",
+					"fill": "#E7F5EE",
+					"borderStyle": "none"
+				},
+				"Button3": {
+					"type": "button",
+					"text": "1- Run request",
+					"top": 400,
+					"left": 350,
+					"width": 110,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"focusable": false,
+					"method": "ObjectMethods/Button3.4dm"
+				},
+				"Input2": {
+					"type": "input",
+					"left": 40,
+					"top": 640,
+					"width": 300,
+					"height": 300,
+					"enterable": false,
+					"focusable": false,
+					"dataSource": "Form:C1466.response"
+				},
+				"Button4": {
+					"type": "button",
+					"text": "Refresh",
+					"top": 610,
+					"left": 840,
+					"width": 90,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button4.4dm",
+					"focusable": false
+				},
+				"Input3": {
+					"type": "input",
+					"left": 630,
+					"top": 640,
+					"width": 300,
+					"height": 300,
+					"enterable": false,
+					"focusable": false,
+					"dataSource": "Form:C1466.product"
+				},
+				"Input7": {
+					"type": "input",
+					"left": 510,
+					"top": 400,
+					"width": 300,
+					"height": 20,
+					"enterable": false,
+					"focusable": false,
+					"dataSource": "Form:C1466.callFunction",
+					"fill": "#E7F5EE",
+					"borderStyle": "none"
+				},
+				"Button7": {
+					"type": "button",
+					"text": "2- Run request",
+					"top": 400,
+					"left": 820,
+					"width": 110,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"focusable": false,
+					"method": "ObjectMethods/Button7.4dm"
+				},
+				"Button8": {
+					"type": "button",
+					"text": "4- Authentify",
+					"top": 550,
+					"left": 790,
+					"width": 100,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"focusable": false,
+					"method": "ObjectMethods/Button8.4dm"
+				},
+				"Input8": {
+					"type": "input",
+					"left": 40,
+					"top": 450,
+					"width": 300,
+					"height": 20,
+					"enterable": false,
+					"focusable": false,
+					"dataSource": "Form:C1466.authentify",
+					"fill": "#E7F5EE",
+					"borderStyle": "none"
+				},
+				"Input11": {
+					"type": "input",
+					"left": 40,
+					"top": 500,
+					"width": 160,
+					"height": 20,
+					"dataSource": "Form:C1466.wrongIdentifier",
+					"enterable": false,
+					"focusable": false,
+					"fill": "#FDF2EF",
+					"borderStyle": "none",
+					"textAlign": "left"
+				},
+				"Input12": {
+					"type": "input",
+					"left": 40,
+					"top": 550,
+					"width": 160,
+					"height": 20,
+					"dataSource": "Form:C1466.password",
+					"enterable": false,
+					"focusable": false,
+					"fill": "#FDF2EF",
+					"borderStyle": "none",
+					"textAlign": "left"
+				},
+				"Button9": {
+					"type": "button",
+					"text": "3- Authentify",
+					"top": 550,
+					"left": 210,
+					"width": 100,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"focusable": false,
+					"method": "ObjectMethods/Button9.4dm"
+				},
+				"Text4": {
+					"type": "text",
+					"text": "Identifier:",
+					"top": 480,
+					"left": 40,
+					"width": 100,
+					"height": 20,
+					"textAlign": "left"
+				},
+				"Text5": {
+					"type": "text",
+					"text": "Password",
+					"top": 530,
+					"left": 40,
+					"width": 100,
+					"height": 20,
+					"textAlign": "left"
+				},
+				"Text2": {
+					"type": "text",
+					"text": "4D Client licences",
+					"top": 610,
+					"left": 633,
+					"width": 200,
+					"height": 20,
+					"fontWeight": "bold"
+				},
+				"ClearSession2": {
+					"type": "button",
+					"text": "View the authentify function",
+					"top": 640,
+					"left": 390,
+					"width": 200,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Authentify.4dm",
+					"focusable": false
+				},
+				"Button1": {
+					"type": "button",
+					"text": "Clear",
+					"top": 610,
+					"left": 260,
+					"width": 80,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"focusable": false,
+					"method": "ObjectMethods/Button1.4dm"
+				},
+				"Text6": {
+					"type": "text",
+					"text": "Result",
+					"top": 610,
+					"left": 40,
+					"width": 120,
+					"height": 20,
+					"fontWeight": "bold"
+				},
+				"Text13": {
+					"type": "text",
+					"text": "Sales persons",
+					"top": 490,
+					"left": 370,
+					"width": 120,
+					"height": 20,
+					"fontWeight": "bold"
+				},
+				"LBSales": {
+					"type": "listbox",
+					"left": 370,
+					"top": 510,
+					"width": 405,
+					"height": 61,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.sales",
+					"selectionMode": "single",
+					"focusable": false,
+					"scrollbarHorizontal": "hidden",
+					"rowHeight": "20px",
+					"headerHeight": "21px",
+					"currentItemSource": "Form:C1466.selectedSales",
+					"columns": [
+						{
+							"header": {
+								"text": "Firstname",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": "This:C1470.firstname",
+							"width": 120
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Lastname"
+							},
+							"name": "Column2",
+							"dataSource": "This:C1470.lastname",
+							"width": 120,
+							"footer": {
+								"name": "Footer2"
+							}
+						},
+						{
+							"header": {
+								"name": "Header6",
+								"text": "Identifier"
+							},
+							"name": "Column6",
+							"footer": {
+								"name": "Footer6"
+							},
+							"dataSource": "This:C1470.identifier",
+							"width": 150
+						}
+					]
 				}
 			}
 		}
@@ -224,5 +578,5 @@
 			"View 1": {}
 		}
 	},
-	"geometryStamp": 14
+	"geometryStamp": 1529
 }

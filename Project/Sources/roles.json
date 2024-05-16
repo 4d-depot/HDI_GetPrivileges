@@ -1,0 +1,54 @@
+{
+    "privileges": [
+        {
+            "privilege": "simple",
+            "includes": []
+        },
+        {
+            "privilege": "medium",
+            "includes": [
+                "simple"
+            ]
+        },
+        {
+            "privilege": "high",
+            "includes": [
+                "medium"
+            ]
+        }
+    ],
+    "roles": [
+        {
+            "role": "Medium",
+            "privileges": [
+                "medium"
+            ]
+        },
+        {
+            "role": "High",
+            "privileges": [
+                "high"
+            ]
+        }
+    ],
+    "permissions": {
+        "allowed": [
+            {
+                "applyTo": "People",
+                "type": "dataclass",
+                "read": [
+                    "simple"
+                ],
+                "create": [
+                    "medium"
+                ],
+                "update": [
+                    "medium"
+                ],
+                "drop": [
+                    "high"
+                ]
+            }
+        ]
+    }
+}

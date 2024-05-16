@@ -1,15 +1,26 @@
+
+var $info : Object
+
+
 Case of 
 		
 	: (Form event code:C388=On Load:K2:1)
 		
-		InitInfo
 		
-	: (Form event code:C388=On Close Box:K2:21)
-		If (Is Windows:C1573 && Get application info:C1599().SDIMode)
-			QUIT 4D:C291
-		Else 
-			CANCEL:C270
-		End if 
+		btnTrace:=False:C215
+		
+		initInfo
+		
+		Form:C1466.ds:=Open datastore:C1452({hostname: "127.0.0.1:80"}; "localId")
+		
+		//managesTexts
+		
+		
+	: (Form event code:C388=On Page Change:K2:54)
+		
+		//managesTexts
+		
+		
 		
 End case 
 

@@ -1,7 +1,6 @@
 C_TEXT:C284($version; $maintext; $subtext)
 C_TEXT:C284($r)
 C_TEXT:C284($format)
-C_LONGINT:C283($width; $height; $shift)
 
 Case of 
 		
@@ -33,7 +32,7 @@ Case of
 			OBJECT SET VISIBLE:C603(*; "txtVersion"; False:C215)
 		Else 
 			
-			$version:="4D "+Substring:C12(Form:C1466.minimumVersion; 1; 2)
+			$version:="4D v"+Substring:C12(Form:C1466.minimumVersion; 1; 2)
 			If (Length:C16(Form:C1466.minimumVersion)>2)
 				$r:=Substring:C12(Form:C1466.minimumVersion; 3; 1)
 				If ($r#"0")
