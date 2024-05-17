@@ -11,7 +11,17 @@ Case of
 		
 		initInfo
 		
-		Form:C1466.ds:=Open datastore:C1452({hostname: "127.0.0.1:80"}; "localId")
+		
+		
+		Form:C1466.authentify:="http://127.0.0.1:80/rest/$catalog/authentify"
+		
+		Form:C1466.roles:={values: ["High"; "Simple"]}
+		Form:C1466.roles.index:=0
+		
+		Form:C1466.getPrivileges:="http://127.0.0.1:80/rest/$info/privileges"
+		
+		OBJECT SET ENABLED:C1123(*; "Authentify@"; False:C215)
+		OBJECT SET ENABLED:C1123(*; "GetPrivileges"; False:C215)
 		
 		//managesTexts
 		

@@ -33,22 +33,6 @@
     ],
     "permissions": {
         "allowed": [
-            {
-                "applyTo": "People",
-                "type": "dataclass",
-                "read": [
-                    "simple"
-                ],
-                "create": [
-                    "medium"
-                ],
-                "update": [
-                    "medium"
-                ],
-                "drop": [
-                    "high"
-                ]
-            }
         ]
     }
 }
