@@ -86,7 +86,7 @@
 					"top": 100,
 					"left": 40,
 					"width": 850,
-					"height": 120,
+					"height": 150,
 					"sizingY": "grow",
 					"dataSource": "Infos[1].Description",
 					"focusable": false,
@@ -131,7 +131,7 @@
 				"Input9": {
 					"type": "input",
 					"left": 40,
-					"top": 640,
+					"top": 650,
 					"width": 290,
 					"height": 150,
 					"enterable": false,
@@ -232,7 +232,7 @@
 				"Input": {
 					"type": "input",
 					"left": 380,
-					"top": 640,
+					"top": 650,
 					"width": 300,
 					"height": 300,
 					"dataSource": "LinesCode{5}",
@@ -244,7 +244,7 @@
 				"Button14": {
 					"type": "button",
 					"text": "Show on the roles.json file on disk",
-					"top": 610,
+					"top": 620,
 					"left": 480,
 					"width": 280,
 					"height": 20,
@@ -257,7 +257,7 @@
 				"Text3": {
 					"type": "text",
 					"text": "roles.json file",
-					"top": 610,
+					"top": 620,
 					"left": 380,
 					"width": 150,
 					"height": 20,
@@ -280,7 +280,7 @@
 				"Text": {
 					"type": "text",
 					"text": "Result",
-					"top": 610,
+					"top": 620,
 					"left": 40,
 					"width": 210,
 					"height": 16,
@@ -459,5 +459,5 @@
 			"View 1": {}
 		}
 	},
-	"geometryStamp": 2147
+	"geometryStamp": 2149
 }
