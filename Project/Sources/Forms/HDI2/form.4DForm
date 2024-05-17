@@ -297,7 +297,7 @@
 					"top": 100,
 					"left": 40,
 					"width": 850,
-					"height": 146,
+					"height": 120,
 					"sizingY": "grow",
 					"dataSource": "Infos[2].Description",
 					"focusable": false,
@@ -316,10 +316,10 @@
 				"Input1": {
 					"type": "input",
 					"left": 40,
-					"top": 357,
+					"top": 480,
 					"width": 300,
 					"height": 20,
-					"enterable": true,
+					"enterable": false,
 					"focusable": false,
 					"dataSource": "Form:C1466.getPrivileges",
 					"fill": "#FFFFFF",
@@ -327,9 +327,9 @@
 				},
 				"Button3": {
 					"type": "button",
-					"text": "1- Run request",
-					"top": 309,
-					"left": 535,
+					"text": "Authentify",
+					"top": 300,
+					"left": 510,
 					"width": 110,
 					"height": 20,
 					"events": [
@@ -338,43 +338,24 @@
 					"focusable": false,
 					"method": "ObjectMethods/Button3.4dm"
 				},
-				"Input2": {
-					"type": "input",
-					"left": 46,
-					"top": 445,
-					"width": 300,
-					"height": 300,
-					"enterable": false,
-					"focusable": false,
-					"dataSource": "Form:C1466.response"
-				},
 				"Input8": {
 					"type": "input",
 					"left": 40,
-					"top": 305,
+					"top": 300,
 					"width": 300,
 					"height": 20,
-					"enterable": true,
+					"enterable": false,
 					"focusable": false,
 					"dataSource": "Form:C1466.authentify",
 					"fill": "#FFFFFF",
 					"borderStyle": "none"
 				},
-				"Text6": {
-					"type": "text",
-					"text": "Result",
-					"top": 415,
-					"left": 46,
-					"width": 120,
-					"height": 20,
-					"fontWeight": "bold"
-				},
 				"Popup Dropdown List": {
 					"type": "dropdown",
-					"left": 364,
-					"top": 305,
-					"width": 151,
-					"height": 29,
+					"left": 350,
+					"top": 300,
+					"width": 150,
+					"height": 20,
 					"events": [
 						"onDataChange"
 					],
@@ -383,9 +364,9 @@
 				},
 				"Button5": {
 					"type": "button",
-					"text": "1- Run request",
-					"top": 357,
-					"left": 364,
+					"text": "Get privileges",
+					"top": 480,
+					"left": 350,
 					"width": 110,
 					"height": 20,
 					"events": [
@@ -393,6 +374,76 @@
 					],
 					"focusable": false,
 					"method": "ObjectMethods/Button5.4dm"
+				},
+				"Input7": {
+					"type": "input",
+					"left": 510,
+					"top": 330,
+					"width": 350,
+					"height": 100,
+					"dataSource": "LinesCode{3}",
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"styledText": true
+				},
+				"Input2": {
+					"type": "input",
+					"left": 40,
+					"top": 560,
+					"width": 290,
+					"height": 350,
+					"enterable": false,
+					"focusable": false,
+					"dataSource": "Form:C1466.result",
+					"scrollbarVertical": "hidden"
+				},
+				"Text1": {
+					"type": "text",
+					"text": "Result",
+					"top": 530,
+					"left": 40,
+					"width": 210,
+					"height": 16,
+					"fontWeight": "bold",
+					"stroke": "#6495ed",
+					"fontSize": 14
+				},
+				"Input11": {
+					"type": "input",
+					"left": 380,
+					"top": 560,
+					"width": 300,
+					"height": 380,
+					"dataSource": "LinesCode{5}",
+					"enterable": false,
+					"focusable": false,
+					"styledText": true,
+					"scrollbarVertical": "visible"
+				},
+				"Button1": {
+					"type": "button",
+					"text": "Show on the roles.json file on disk",
+					"top": 530,
+					"left": 480,
+					"width": 280,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button1.4dm",
+					"focusable": false
+				},
+				"Text2": {
+					"type": "text",
+					"text": "roles.json file",
+					"top": 530,
+					"left": 380,
+					"width": 150,
+					"height": 20,
+					"fontWeight": "bold",
+					"stroke": "#6495ed",
+					"fontSize": 14
 				}
 			}
 		}
@@ -408,5 +459,5 @@
 			"View 1": {}
 		}
 	},
-	"geometryStamp": 2050
+	"geometryStamp": 2147
 }

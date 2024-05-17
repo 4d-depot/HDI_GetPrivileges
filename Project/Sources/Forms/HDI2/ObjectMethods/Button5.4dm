@@ -28,7 +28,7 @@ $end:=Position:C15(";"; $cookie)
 Form:C1466.sessionCookie:=Substring:C12($cookie; $start; $end-$start)
 
 If ($request.response.body#Null:C1517)
-	Form:C1466.response:=$request.response.body
+	Form:C1466.result:=$request.response.body
 End if 
 
 

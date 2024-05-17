@@ -15,7 +15,7 @@ Case of
 		
 		Form:C1466.authentify:="http://127.0.0.1:80/rest/$catalog/authentify"
 		
-		Form:C1466.roles:={values: ["High"; "Simple"]}
+		Form:C1466.roles:={values: ["High"; "Medium"]}
 		Form:C1466.roles.index:=0
 		
 		Form:C1466.getPrivileges:="http://127.0.0.1:80/rest/$info/privileges"

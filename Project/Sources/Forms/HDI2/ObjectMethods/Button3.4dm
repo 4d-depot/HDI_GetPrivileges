@@ -27,6 +27,6 @@ $start:=Position:C15("4DSID_HDI_GetPrivileges"; $cookie)
 $end:=Position:C15(";"; $cookie)
 Form:C1466.sessionCookie:=Substring:C12($cookie; $start; $end-$start)
 
-
-
-
+If ($request.response.body#Null:C1517)
+	Form:C1466.result:=$request.response.body
+End if 
