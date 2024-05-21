@@ -23,12 +23,12 @@ Case of
 		OBJECT SET ENABLED:C1123(*; "Authentify@"; False:C215)
 		OBJECT SET ENABLED:C1123(*; "GetPrivileges"; False:C215)
 		
-		//managesTexts
+		manageTexts
 		
 		
 	: (Form event code:C388=On Page Change:K2:54)
 		
-		//managesTexts
+		manageTexts
 		
 		
 		

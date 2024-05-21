@@ -6,5 +6,5 @@ If (btnTrace)
 End if 
 
 
-Form:C1466.result:=Form:C1466.ds.authentify("High")
+Form:C1466.result:=Form:C1466.ds.authentify(Form:C1466.roles.currentValue)
 
