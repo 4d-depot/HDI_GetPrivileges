@@ -125,18 +125,18 @@
 					"dataSource": "Form:C1466.result",
 					"scrollbarVertical": "hidden"
 				},
-				"Authentify1": {
+				"Authentify": {
 					"type": "button",
 					"text": "Authentify",
 					"top": 340,
-					"left": 350,
+					"left": 400,
 					"width": 100,
 					"height": 20,
 					"events": [
 						"onClick"
 					],
 					"focusable": false,
-					"method": "ObjectMethods/Authentify1.4dm",
+					"method": "ObjectMethods/Authentify.4dm",
 					"textAlign": "center"
 				},
 				"GetPrivileges": {
@@ -264,7 +264,7 @@
 				},
 				"Popup Dropdown List1": {
 					"type": "dropdown",
-					"left": 160,
+					"left": 210,
 					"top": 340,
 					"width": 150,
 					"height": 20,
@@ -277,7 +277,7 @@
 				},
 				"Text4": {
 					"type": "text",
-					"text": "Authentify with:",
+					"text": "Authentify with role:",
 					"top": 340,
 					"left": 40,
 					"width": 150,
@@ -325,7 +325,7 @@
 					"type": "button",
 					"text": "Authentify",
 					"top": 300,
-					"left": 510,
+					"left": 620,
 					"width": 110,
 					"height": 20,
 					"events": [
@@ -348,7 +348,7 @@
 				},
 				"Popup Dropdown List": {
 					"type": "dropdown",
-					"left": 350,
+					"left": 460,
 					"top": 300,
 					"width": 150,
 					"height": 20,
@@ -374,11 +374,11 @@
 				},
 				"Input7": {
 					"type": "input",
-					"left": 510,
+					"left": 460,
 					"top": 330,
 					"width": 350,
 					"height": 100,
-					"dataSource": "LinesCode{3}",
+					"dataSource": "LinesCode{4}",
 					"enterable": false,
 					"focusable": false,
 					"fill": "transparent",
@@ -441,6 +441,16 @@
 					"fontWeight": "bold",
 					"stroke": "#6495ed",
 					"fontSize": 14
+				},
+				"Text5": {
+					"type": "text",
+					"text": "Role:",
+					"top": 300,
+					"left": 350,
+					"width": 100,
+					"height": 20,
+					"fontWeight": "bold",
+					"textAlign": "right"
 				}
 			}
 		}
@@ -456,5 +466,5 @@
 			"View 1": {}
 		}
 	},
-	"geometryStamp": 2776
+	"geometryStamp": 2841
 }
