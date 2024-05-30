@@ -1,6 +1,7 @@
 Class extends DataStoreImplementation
 
 
+
 exposed Function getPrivileges() : Collection
 	return Session:C1714.getPrivileges()
 	
