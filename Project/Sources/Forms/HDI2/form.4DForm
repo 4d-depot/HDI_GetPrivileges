@@ -205,7 +205,7 @@
 				},
 				"Button14": {
 					"type": "button",
-					"text": "Show on the roles.json file on disk",
+					"text": "Show the roles.json file on disk",
 					"top": 920,
 					"left": 670,
 					"width": 250,
@@ -418,7 +418,7 @@
 				},
 				"Button1": {
 					"type": "button",
-					"text": "Show on the roles.json file on disk",
+					"text": "Show the roles.json file on disk",
 					"top": 930,
 					"left": 670,
 					"width": 250,
