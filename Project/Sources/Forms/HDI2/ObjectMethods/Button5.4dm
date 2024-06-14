@@ -6,11 +6,9 @@ End if
 
 var $headers : Object:={Cookie: ""}
 var $request; $requestObj : Object
-var $bodyColl : Collection
 var $request : Object
 
 var $start; $end : Integer
-var $info : Object
 var $cookies : Collection
 var $cookie : Text
 

@@ -1,5 +1,4 @@
 
-var $info : Object
 
 
 Case of 
