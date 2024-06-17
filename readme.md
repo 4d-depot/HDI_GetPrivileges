@@ -1,8 +1,11 @@
-# HDI_Template_20
 
-Description (4D 20 Rx)
+# HDI_GetPrivileges
 
-Find more information on the [blog post](https://blog.4d.com/).
+**Description** (4D 20 R6)
+
+Inspect Session Privileges for Easy Debugging
+
+Find more information on the [blog post](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging//).
 
 ## Installing and Using a 4D Project
 
